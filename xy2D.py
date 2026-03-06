@@ -295,7 +295,7 @@ class Window(pyglet.window.Window):
         dx, dy, dz = dx * d, dy * d, dz * d
         # gravity
         if not self.flying:
-            self.dy -= dt * 0.044 # g force, should be = jump_speed * 0.5 / max_jump_height
+            self.dy -= dt * 0.671 # g force, should be = jump_speed * 0.5 / max_jump_height
             self.dy = max(self.dy, -0.5) # terminal velocity
             dy += self.dy * dt
         # collisions
@@ -466,5 +466,4 @@ def main():
 
 
 if __name__ == '__main__':
-
     main()
